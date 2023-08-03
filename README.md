@@ -101,6 +101,13 @@
 - [ ] Detailed documentation is provided for the implemented architecture, including infrastructure setup, security configurations, monitoring, and disaster recovery procedures. The documentation is comprehensive and accessible to all relevant stakeholders.
 - [ ] 
 
+## Repo and code
+
+- [ ] A Github Action is used to deploy the resource to Azure.
+- [ ] containerworkflow.yaml is deploying azure continer instace to create ghost image. After that an image is depoyd to azure aks with 2 replica.
+- [ ] armtemplatedeploy.yaml is creatig resource group and app servie plan with web app of ghost.
+- [ ] In this solution I wanted to demonstrate the deployment of basic resources. Further deployment of services like azure front door, storage, databases etc. requires more time and testing.
+
 # Alternatively Azure Kubernetes service (aks) 
 
 ## Scalability
