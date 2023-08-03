@@ -6,7 +6,7 @@
 
 ## High-Level Architecture:
 
-- Use **Azure App Service Plan** with an autoscaling option to deploy and manage the Ghost Blog application in containers. Azure App Service provides scalability, easy deployment, and automated updates.
+- Use **Azure App Service Plan** with an autoscaling option to deploy and manage the Ghost Blog web application. Azure App Service provides scalability, easy deployment, and automated updates with autos ale options. 
 - Set up an **Azure Database for PostgreSQL** to host the blog's database for content storage. Azure Database for PostgreSQL is a managed service that ensures high availability and scalability.
 - Store media and static assets in **Azure Blob Storage**. Blob Storage provides low-cost, scalable storage for the blog's media files.
 - Utilize **Azure Content Delivery Network (CDN)** to distribute static content globally and improve website performance.
@@ -30,7 +30,7 @@
 ## DevOps and Separated Environments:
 
 - Use **Azure DevOps** to manage CI/CD pipelines for the Ghost Blog application.
-- Create separate AKS namespaces or clusters for development, testing, and production environments to support the DevOps teams' workflow.
+- Create separate environment for testing (staging), and production to support the DevOps teams' workflow.
 
 ## Operations and Visibility:
 
@@ -52,7 +52,7 @@
 
 ## Scalability:
 
-- [ ] The Ghost Blog application automatically scales the number of instances in Azure App Service based on traffic. 
+- [ ] The Ghost Blog application automatically scales the number of instances in Azure App Service based on traffic (cpu usage etc.). 
 - [ ] Azure Database for PostgreSQL can handle increasing loads during traffic spikes without performance degradation.
 - [ ] Load balancing and distribution of traffic are smooth during high-traffic periods, and there are no bottlenecks affecting user experience.
 
@@ -65,7 +65,7 @@
 ## Consistent Results:
 
 - [ ] The Ghost Blog application consistently returns the same results for all users across different sessions and interactions.
-- [ ] Caching mechanisms, if used, provide consistent content to users without stale data or inconsistencies.
+- [ ] Caching mechanisms, if used such a Azure Contend Delivery Network, provide consistent content to users without stale data or inconsistencies.
 
 ## Resiliency:
 
@@ -104,7 +104,7 @@
 ## Repo and code
 
 - [ ] A Github Action is used to deploy the resource to Azure.
-- [ ] containerworkflow.yaml is deploying azure continer instace to create ghost image. After that an image is depoyd to azure aks with 2 replica.
+- [ ] containerworkflow.yaml is deploying azure continer instance to create ghost image. After that an image is deployed to azure aks with 2 replica.
 - [ ] armtemplatedeploy.yaml is creatig resource group and app servie plan with web app of ghost.
 - [ ] In this solution I wanted to demonstrate the deployment of basic resources. Further deployment of services like azure front door, storage, databases etc. requires more time and testing.
 
