@@ -6,7 +6,7 @@
 
 ## High-Level Architecture:
 
-- Use **Azure App Service Plan** with an autoscaling option to deploy and manage the Ghost Blog web application. Azure App Service provides scalability, easy deployment, and automated updates with autos ale options. 
+- Use **Azure App Service Plan** with an autoscaling option to deploy and manage the Ghost Blog web application. Azure App Service provides scalability, easy deployment, and automated updates with auto scale options. 
 - Set up an **Azure Database for PostgreSQL** to host the blog's database for content storage. Azure Database for PostgreSQL is a managed service that ensures high availability and scalability.
 - Store media and static assets in **Azure Blob Storage**. Blob Storage provides low-cost, scalable storage for the blog's media files.
 - Utilize **Azure Content Delivery Network (CDN)** to distribute static content globally and improve website performance.
